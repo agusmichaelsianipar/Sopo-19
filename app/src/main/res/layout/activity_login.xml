@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/txtMEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:width="400dp"
+        android:layout_marginTop="130dp"
+        android:ems="10"
+        android:hint="@string/hintEmail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/txtMPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:width="400dp"
+        android:ems="10"
+        android:hint="@string/hintPassword"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnMDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="330dp"
+        android:text="@string/btnDaftar" />
+
+    <Button
+        android:id="@+id/btnMMasuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="230dp"
+        android:text="@string/btnMasuk" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "3672066416",
+    "firebase_url": "https://sopo-19.firebaseio.com",
+    "project_id": "sopo-19",
+    "storage_bucket": "sopo-19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3672066416:android:3a1e47df3fabed3ad827b5",
+        "android_client_info": {
+          "package_name": "com.example.sopo_19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3672066416-1vsempikkklllmhp1m53ge1utublb0ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sopo_19",
+            "certificate_hash": "68f32f8a384fd1b3d3d818cd1af3514fb0ef4f11"
+          }
+        },
+        {
+          "client_id": "3672066416-mg1bm5a8gf5sf3mspfuncflatsu573mm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTrbopaTzNjOe1VVME9WUxg5fMgWbcXGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3672066416-mg1bm5a8gf5sf3mspfuncflatsu573mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

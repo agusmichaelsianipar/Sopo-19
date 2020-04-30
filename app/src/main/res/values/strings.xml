@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Sopo-19</string>
     <string name="welcome_text">WELCOME TO</string>
+    <string name="hintEmail">Silahkan Masukkan Email</string>
+    <string name="hintPassword">Silahkan Masukkan Password</string>
+    <string name="hintNomer">Silahkan Masukkan No HP</string>
+    <string name="btnMasuk">MASUK</string>
+    <string name="btnDaftar">DAFTAR</string>
 </resources>
