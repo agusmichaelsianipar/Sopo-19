@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(!task.isSuccessful()){
                                 Toast.makeText(LoginActivity.this,"Login Gagal Silahkan Coba Lagi",Toast.LENGTH_SHORT).show();
                             }else{
-                                Intent intToHome = new Intent(LoginActivity.this,MainActivity.class);
+                                Intent intToHome = new Intent(LoginActivity.this,ApdTersediaActivity.class);
                                 startActivity(intToHome);
                                 finish();
                             }

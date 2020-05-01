@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/SplashScreenStyle">
         <activity
+            android:name=".ApdTersediaActivity"
+            android:label="@string/title_activity_apd_tersedia"
+            android:theme="@style/SplashScreenStyle.NoActionBar"></activity>
+        <activity
             android:name=".Splashscreen"
             android:label="@string/app_name"
             android:theme="@style/SplashScreenStyle">
@@ -19,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
     </application>
