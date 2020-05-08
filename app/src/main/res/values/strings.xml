@@ -15,4 +15,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="apd_lbl">KETERSEDIAAN APD</string>
+    <string name="selengkapnya">.....</string>
+    <string name="kiri_judul">Data Perkembangan Kasus Covid-19 di Indonesia</string>
+    <string name="total_lbl">POSITIF TERKONFIRMASI</string>
+    <string name="sembuh_lbl">SEMBUH</string>
+    <string name="meninggal_lbl">MENINGGAL</string>
+    <string name="rawat_lbl">MENJALANI PERAWATAN</string>>
 </resources>

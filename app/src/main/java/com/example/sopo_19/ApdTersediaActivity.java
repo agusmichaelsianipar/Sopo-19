@@ -1,16 +1,13 @@
 package com.example.sopo_19;
 
 import android.os.Bundle;
-
 import com.example.sopo_19.tab.MyAdapter;
 import com.example.sopo_19.tab.SlidingTabLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
 import android.view.View;
 
 public class ApdTersediaActivity extends AppCompatActivity {
@@ -38,7 +35,7 @@ public class ApdTersediaActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Fiturnya ditunggu ya Sayang :*", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

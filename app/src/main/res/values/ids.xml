@@ -3,4 +3,15 @@
     <item name="splash_screen" type="id"></item>
     <item name="st1_tabs" type="id" />
     <item name="vp_tabs" type="id" />
+    <item name="btn_detail" type="id" />
+    <item name="tv_total" type="id" />
+    <item name="tv_positif" type="id"></item>
+    <item name="isi_tv_total" type="id" />
+    <item name="isi_tv_positif" type="id" />
+    <item name="tv_sembuh" type="id" />
+    <item name="isi_tv_sembuh" type="id" />
+    <item name="tv_meninggal" type="id" />
+    <item name="isi_tv_meninggal" type="id" />
+    <item name="tv_rawat" type="id" />
+    <item name="isi_tv_rawat" type="id" />
 </resources>

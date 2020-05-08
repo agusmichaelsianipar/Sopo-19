@@ -35,9 +35,9 @@ public class MyAdapter extends FragmentPagerAdapter {
         if(position ==0){
             frag = new KiriFragment();
         }else if(position == 1){
-            frag = new KananFragment();
-        }else if(position == 2){
             frag = new TengahFragment();
+        }else if(position == 2){
+            frag = new KananFragment();
         }
 
         Bundle b = new Bundle();

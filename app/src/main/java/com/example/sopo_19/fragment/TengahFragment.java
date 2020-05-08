@@ -4,14 +4,25 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.example.sopo_19.R;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class TengahFragment extends Fragment {
+    private View ApdView;
+    private RecyclerView myApdList;
+
+    private DatabaseReference ApdRef;
 
     public TengahFragment(){
         //Constructor
@@ -23,7 +34,78 @@ public class TengahFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tengah, container, false);
+        ApdView =  inflater.inflate(R.layout.fragment_kanan, container, false);
+
+        myApdList = (RecyclerView) ApdView.findViewById(R.id.apd_list);
+        myApdList.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        ApdRef = FirebaseDatabase.getInstance().getReference().child("dataapd");
+
+        return ApdView;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerOptions options =
+                new FirebaseRecyclerOptions.Builder<DataApd>()
+                        .setQuery(ApdRef,DataApd.class)
+                        .build();
+
+        FirebaseRecyclerAdapter<DataApd,ApdViewHolder> adapter
+                = new FirebaseRecyclerAdapter<DataApd, ApdViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(final ApdViewHolder apdViewHolder, int i,DataApd dataApd) {
+                String Apds = getRef(i).getKey();
+
+                ApdRef.child(Apds).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String namaCmp = dataSnapshot.child("namacmp").getValue().toString();
+                        long coverAll = Long.parseLong(dataSnapshot.child("coverall").getValue().toString());
+                        long nMask = Long.parseLong(dataSnapshot.child("mask").getValue().toString());
+                        String nKota = dataSnapshot.child("kota").getValue().toString();
+
+                        apdViewHolder.compName.setText(namaCmp);
+                        apdViewHolder.coverAll.setText(String.valueOf(coverAll));
+                        apdViewHolder.surMask.setText(String.valueOf(nMask));
+                        apdViewHolder.kotaName.setText(nKota);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+            @NonNull
+            @Override
+            public ApdViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+                View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_view, viewGroup,false);
+                ApdViewHolder viewHolder = new ApdViewHolder(view);
+                return viewHolder;
+            }
+        };
+
+        myApdList.setAdapter(adapter);
+        adapter.startListening();
+
+    }
+
+    public static class ApdViewHolder extends RecyclerView.ViewHolder{
+
+        TextView compName, coverAll, surMask,kotaName;
+
+        public ApdViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            compName = itemView.findViewById(R.id.nama_cmp);
+            coverAll = itemView.findViewById(R.id.isicoverallsuit);
+            surMask = itemView.findViewById(R.id.isisurgicalmask);
+            kotaName = itemView.findViewById(R.id.kotaa);
+        }
     }
 
 }
