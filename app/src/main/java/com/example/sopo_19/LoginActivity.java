@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         DDaftarId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intToDaftar = new Intent(LoginActivity.this, ApdTersediaActivity.class);
+                Intent intToDaftar = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intToDaftar);
             }
         });

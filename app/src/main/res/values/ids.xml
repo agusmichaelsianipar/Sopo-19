@@ -14,4 +14,7 @@
     <item name="isi_tv_meninggal" type="id" />
     <item name="tv_rawat" type="id" />
     <item name="isi_tv_rawat" type="id" />
+    <item name="tv_konfirm" type="id" />
+    <item name="isi_helper" type="id" />
+    <item name="kontak" type="id" />
 </resources>

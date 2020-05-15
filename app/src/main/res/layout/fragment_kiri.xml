@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBG"
     tools:context=".fragment.KiriFragment">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
-    android:layout_marginBottom="50dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:gravity="center_vertical"
     >
 
 
@@ -22,105 +24,177 @@
         android:fontFamily="sans-serif-black"
         android:textSize="26dp"
         android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
         android:textAlignment="center"
         android:layout_margin="20dp"
         android:gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/total_lbl"
-        android:textSize="24dp"
-        android:id="@id/tv_total"
-        android:layout_below="@id/textview_first"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
+<androidx.cardview.widget.CardView
+    android:layout_width="190dp"
+    android:layout_height="140dp"
+    android:layout_marginTop="130dp"
+    android:layout_marginLeft="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/cardview_default_radius"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    android:gravity="center"
+    app:cardBackgroundColor="@color/colorRed">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="000000"
-        android:textSize="24dp"
-        android:id="@id/isi_tv_total"
+        android:text="@string/total_lbl"
+        android:textSize="22dp"
+        android:id="@id/tv_total"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="55dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPutih"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/konfirm_lbl"
+        android:textSize="22dp"
+        android:textColor="@color/colorPutih"
+        android:id="@id/tv_konfirm"
         android:layout_below="@id/tv_total"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="7dp"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        tools:text="000000"
+        android:textSize="22dp"
+        android:textColor="@color/colorPutih"
+        android:id="@id/isi_tv_total"
+        android:layout_below="@id/tv_konfirm"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:layout_marginTop="90dp"/>
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="200dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardBackgroundColor="@color/colorGreenLight">
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sembuh_lbl"
         android:textSize="24dp"
+        android:textColor="@color/colorPutih"
         android:id="@id/tv_sembuh"
-        android:layout_below="@id/isi_tv_total"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="000000"
-        android:textSize="24dp"
-        android:id="@id/isi_tv_sembuh"
-        android:layout_below="@id/tv_sembuh"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0000"
+            android:textSize="24dp"
+            android:textColor="@color/colorPutih"
+            android:id="@id/isi_tv_sembuh"
+            android:layout_below="@id/tv_sembuh"
+            android:textAlignment="center"
+            android:layout_marginLeft="65dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginTop="70dp"/>
+    </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="270dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardBackgroundColor="@color/colorWhite">
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
         android:text="@string/rawat_lbl"
         android:textSize="24dp"
         android:id="@id/tv_rawat"
-        android:layout_below="@id/isi_tv_sembuh"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"/>
+        android:textColor="@color/colorGreenLight2"
+        android:layout_marginTop="20dp"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="000000"
+        tools:text="00000"
         android:textSize="24dp"
         android:id="@id/isi_tv_rawat"
         android:layout_below="@id/tv_rawat"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
+        android:textColor="@color/colorGreenLight2"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="65dp"/>
+    </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/meninggal_lbl"
-        android:textSize="24dp"
-        android:id="@id/tv_meninggal"
-        android:layout_below="@id/isi_tv_rawat"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
-        android:textStyle="bold"
-        android:layout_marginTop="40dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="000000"
-        android:textSize="24dp"
-        android:id="@id/isi_tv_meninggal"
-        android:layout_below="@id/tv_meninggal"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/meninggal_layout"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardBackgroundColor="@color/colorBiruJelek">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="@string/meninggal_lbl"
+            android:textSize="24dp"
+            android:textColor="@color/colorPutih"
+            android:id="@id/tv_meninggal"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0000"
+            android:textSize="24dp"
+            android:textColor="@color/colorPutih"
+            android:id="@id/isi_tv_meninggal"
+            android:layout_below="@id/tv_meninggal"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="70dp"/>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sopo-19</string>
+    <string name="app_name">SOPO-19</string>
     <string name="welcome_text">WELCOME TO</string>
     <string name="hintEmail">Silahkan Masukkan Email</string>
     <string name="hintPassword">Silahkan Masukkan Password</string>
@@ -18,8 +18,9 @@
     <string name="apd_lbl">KETERSEDIAAN APD</string>
     <string name="selengkapnya">.....</string>
     <string name="kiri_judul">Data Perkembangan Kasus Covid-19 di Indonesia</string>
-    <string name="total_lbl">POSITIF TERKONFIRMASI</string>
+    <string name="total_lbl">POSITIF</string>
+    <string name="konfirm_lbl">TERKONFIRMASI</string>
     <string name="sembuh_lbl">SEMBUH</string>
     <string name="meninggal_lbl">MENINGGAL</string>
-    <string name="rawat_lbl">MENJALANI PERAWATAN</string>>
+    <string name="rawat_lbl">DIRAWAT</string>>
 </resources>

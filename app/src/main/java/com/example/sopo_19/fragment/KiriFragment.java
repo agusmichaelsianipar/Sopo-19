@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -37,7 +38,7 @@ public class KiriFragment extends Fragment {
     ) {
         // Inflate the layout for this fragment
         View tampil = inflater.inflate(R.layout.fragment_kiri, container, false);
-
+        CardView cardView = tampil.findViewById(R.id.meninggal_layout);
         tv_Total = tampil.findViewById(R.id.isi_tv_total);
         tv_Sembuh = tampil.findViewById(R.id.isi_tv_sembuh);
         tv_Rawat = tampil.findViewById(R.id.isi_tv_rawat);

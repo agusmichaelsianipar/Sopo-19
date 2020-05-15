@@ -6,9 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg1"
-    android:id="@+id/rs_layout"
-    android:orientation="vertical"
-    tools:context=".InsertRs">
+    android:id="@+id/insert_layout"
+    tools:context=".InsertApd">
 
     <TextView
         android:layout_width="match_parent"
@@ -16,21 +15,20 @@
         android:layout_marginTop="30dp"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:text="Tambah Data Kebutuhan APD"
+        android:text="Tambah Data Ketersediaan APD"
         android:textSize="23dp"
         android:textStyle="bold"
         android:textColor="@color/colorPutih"
         android:gravity="center_horizontal" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="450dp"
-        android:src="@drawable/icon_rs"
-        android:foregroundGravity="center_horizontal"/>
-
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="450dp"
+    android:src="@drawable/icon_mask"
+    android:foregroundGravity="center_horizontal"/>
     <EditText
-        android:id="@+id/et_namars"
+        android:id="@+id/et_namacmp"
         android:layout_width="350dp"
         android:textSize="20dp"
         android:textColor="@color/colorPutih"
@@ -40,17 +38,17 @@
         android:layout_marginLeft="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Masukan Nama Rumah Sakit" />
+        android:hint="Masukan Nama Perusahaan/Organisasi" />
 
     <EditText
-        android:id="@+id/et_coverallrs"
+        android:id="@+id/et_coverall"
         android:layout_width="350dp"
         android:textSize="20dp"
         android:textColor="@color/colorPutih"
         android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/et_namars"
+        android:layout_below="@id/et_namacmp"
         android:layout_marginLeft="35dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -59,14 +57,14 @@
         tools:layout_editor_absoluteY="231dp" />
 
     <EditText
-        android:id="@+id/et_maskrs"
+        android:id="@+id/et_mask"
         android:layout_width="350dp"
         android:textSize="20dp"
         android:textColor="@color/colorPutih"
         android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/et_coverallrs"
+        android:layout_below="@id/et_coverall"
         android:layout_marginLeft="35dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -75,30 +73,30 @@
         tools:layout_editor_absoluteY="352dp" />
 
     <EditText
-        android:id="@+id/et_kotars"
+        android:id="@+id/et_kota"
         android:layout_width="350dp"
         android:textSize="20dp"
         android:textColor="@color/colorPutih"
         android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/et_maskrs"
+        android:layout_below="@id/et_mask"
         android:layout_marginLeft="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Masukan Alamat Rumah Sakit"
+        android:hint="Masukan Alamat Penyedia"
         tools:layout_editor_absoluteX="78dp"
         tools:layout_editor_absoluteY="463dp" />
 
     <EditText
-        android:id="@+id/et_kontakrs"
+        android:id="@+id/et_kontak"
         android:layout_width="350dp"
         android:textSize="20dp"
         android:textColor="@color/colorPutih"
         android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/et_kotars"
+        android:layout_below="@id/et_kota"
         android:layout_marginLeft="35dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -107,14 +105,13 @@
         tools:layout_editor_absoluteY="463dp" />
 
     <Button
-        android:id="@+id/tbl_simpanrs"
+        android:id="@+id/tbl_simpan"
         android:layout_width="110dp"
         android:layout_height="40dp"
-        android:layout_below="@id/et_kontakrs"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="265dp"
+        android:layout_below="@id/et_kontak"
         android:background="@color/colorPutih"
         android:textColor="@color/colorBG"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="265dp"
         android:text="Simpan Data" />
-
 </RelativeLayout>

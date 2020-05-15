@@ -57,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
                             if (!task.isSuccessful()){
                                 Toast.makeText(RegisterActivity.this,"Proses Daftar Gagal, Silahkan Coba Lagi",Toast.LENGTH_SHORT).show();
                             }else{
-                                startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                                startActivity(new Intent(RegisterActivity.this,ApdTersediaActivity.class));
                                 finish();
                             }
                         }

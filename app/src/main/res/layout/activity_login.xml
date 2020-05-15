@@ -4,8 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     tools:context=".LoginActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="MASUK"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPutih"
+        android:gravity="center_horizontal" />
     <EditText
         android:id="@+id/txtMEmail"
         android:layout_width="wrap_content"
@@ -14,6 +25,7 @@
         android:layout_marginRight="45dp"
         android:width="400dp"
         android:layout_marginTop="130dp"
+        android:textColor="@color/colorPutih"
         android:ems="10"
         android:hint="@string/hintEmail"
         android:inputType="textEmailAddress" />
@@ -22,6 +34,7 @@
         android:id="@+id/txtMPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorPutih"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
@@ -32,18 +45,22 @@
 
     <Button
         android:id="@+id/btnMDaftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="330dp"
+        android:background="@color/colorPutih"
+        android:textColor="@color/colorBG"
         android:text="@string/btnDaftar" />
 
     <Button
         android:id="@+id/btnMMasuk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="280dp"
         android:layout_marginTop="230dp"
+        android:background="@color/colorPutih"
+        android:textColor="@color/colorBG"
         android:text="@string/btnMasuk" />
 
 </RelativeLayout>

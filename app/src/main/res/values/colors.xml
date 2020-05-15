@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#1f5aff</color>
+    <color name="colorPrimaryDark">#1f5aff</color>
+    <color name="colorBiruBagus">#1f5aff</color>
+    <color name="colorBiruJelek">#050063</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite">#e3e3e3</color>
+    <color name="colorPutih">#FFFF</color>
     <color name="colorDark">#000000</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorGrey">#9e9e9e</color>
+    <color name="colorGreenLight">#00d912</color>
+    <color name="colorGreenLight2">#0bb522</color>
+    <color name="colorBG">#1C1C1C</color>
 </resources>

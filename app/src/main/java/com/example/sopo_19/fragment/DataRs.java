@@ -1,14 +1,23 @@
 package com.example.sopo_19.fragment;
 
 public class DataRs {
-    String namars,kota;
+    String namars,kota,kontak;
     long mask,coverall;
 
-    public DataRs(String namars, String kota, long mask, long coverall) {
+    public DataRs(String namars, String kota, String kontak, long mask, long coverall) {
         this.namars = namars;
         this.kota = kota;
+        this.kontak = kontak;
         this.mask = mask;
         this.coverall = coverall;
+    }
+
+    public String getKontak() {
+        return kontak;
+    }
+
+    public void setKontak(String kontak) {
+        this.kontak = kontak;
     }
 
     public DataRs() {

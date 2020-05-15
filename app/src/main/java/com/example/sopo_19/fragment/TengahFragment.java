@@ -1,5 +1,6 @@
 package com.example.sopo_19.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.sopo_19.InsertApd;
+import com.example.sopo_19.MainActivity;
 import com.example.sopo_19.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class TengahFragment extends Fragment {
     private View ApdView;
     private RecyclerView myApdList;
-
+    FloatingActionButton tblSimpan;
     private DatabaseReference ApdRef;
 
     public TengahFragment(){
@@ -40,7 +45,13 @@ public class TengahFragment extends Fragment {
         myApdList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         ApdRef = FirebaseDatabase.getInstance().getReference().child("dataapd");
-
+        tblSimpan = ApdView.findViewById(R.id.fab_kesimpan);
+        tblSimpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), InsertApd.class));
+            }
+        });
         return ApdView;
     }
 
@@ -66,11 +77,13 @@ public class TengahFragment extends Fragment {
                         long coverAll = Long.parseLong(dataSnapshot.child("coverall").getValue().toString());
                         long nMask = Long.parseLong(dataSnapshot.child("mask").getValue().toString());
                         String nKota = dataSnapshot.child("kota").getValue().toString();
+                        String nKontak = dataSnapshot.child("kontak").getValue().toString();
 
                         apdViewHolder.compName.setText(namaCmp);
                         apdViewHolder.coverAll.setText(String.valueOf(coverAll));
                         apdViewHolder.surMask.setText(String.valueOf(nMask));
                         apdViewHolder.kotaName.setText(nKota);
+                        apdViewHolder.kontakName.setText(nKontak);
                     }
 
                     @Override
@@ -96,7 +109,7 @@ public class TengahFragment extends Fragment {
 
     public static class ApdViewHolder extends RecyclerView.ViewHolder{
 
-        TextView compName, coverAll, surMask,kotaName;
+        TextView compName, coverAll, surMask,kotaName,kontakName;
 
         public ApdViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -105,6 +118,7 @@ public class TengahFragment extends Fragment {
             coverAll = itemView.findViewById(R.id.isicoverallsuit);
             surMask = itemView.findViewById(R.id.isisurgicalmask);
             kotaName = itemView.findViewById(R.id.kotaa);
+            kontakName = itemView.findViewById(R.id.kontak);
         }
     }
 

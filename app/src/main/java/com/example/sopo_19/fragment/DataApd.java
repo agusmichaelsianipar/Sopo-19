@@ -1,14 +1,23 @@
 package com.example.sopo_19.fragment;
 
 public class DataApd {
-    String namacmp,kota;
+    String namacmp,kota,kontak;
     long mask,coverall;
 
-    public DataApd(String namacmp, String kota, long mask, long coverall) {
+    public DataApd(String namacmp, String kota, String kontak, long mask, long coverall) {
         this.namacmp = namacmp;
         this.kota = kota;
+        this.kontak = kontak;
         this.mask = mask;
         this.coverall = coverall;
+    }
+
+    public String getKontak() {
+        return kontak;
+    }
+
+    public void setKontak(String kontak) {
+        this.kontak = kontak;
     }
 
     public DataApd(){
